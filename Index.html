@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <title>Alexis Gantz Simple Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="styles/simple.css">
+</head>
+
+<body>
+	<header>
+        <h1>Alexis Gantz</h1>
+        <h2>Random Facts</h2>
+    </header>
+    <main>
+
+      <div>
+        <a href="menu.html" class="whatshot">What&#39;s Hot</a>
+        <div>
+          <ul>
+          <% for(idx in public.facts._data) { %>
+            <li>
+              
+              <div>
+                <a>
+                <%- public.facts._data[idx].title %></a>
+                <p>
+                  <%- public.facts._data[idx].text %> 
+                  &#36;<%- public.facts._data[idx].title %>
+                </p>
+              </div>
+            </li>
+          <% } %>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Fact #1
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    I have way too many consoles and video games, most of which I either haven't finished 
+                    or haven't played at all! I have about 8 different consoles, 4 hand-helds, and a gaming PC. I actually 
+                    don't spend a lot of time gaming, but when I do I tend to go all out and will play the games for 10+ 
+                    hours a day for like 2 solid weeks.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Fact #2
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    I love posters and art, mostly from comic books and video games. I do not like having 
+                    just "official game art", I usually prefer concept art or art from Indie developers. But I also have way 
+                    too many posters and not enough wall space for them so they just sit in poster tubes until I decide to 
+                    play tetris on my walls again.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Fact #3
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    I tend to get obsessive with Indie Developers and tend to just play their games and focus 
+                    on those. Although I am an avid Zelda fan, I do tend to prefer indie games. Right now I am currently obsessed 
+                    with Supergiant Games and Night School Studio. Especially the art and music from supergiant games 
+                    (the transistor soundtrack is my go-to for when I'm coding).
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        Fact #4
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        I love to bake! I actually make commission cakes/cupcakes/treats as sort of a supplement 
+                      income thing. I started really getting into baking about 3 years ago and I picked up on it really quickly. 
+                      I spent a good while researching the chemistry behind baking because I wanted to make my recipers perfect, 
+                      and I feel like I've done it. It low-key drives my friends insane when they try to bake with me because I 
+                      am so percise and often times don't let them do anything.
+                    </div>
+                </div>
+              </div>
+          </div>
+
+
+<!--
+        <div class="card-group">
+            <div class="card text-white bg-secondary">
+              <div class="card-body">
+                <h5 class="card-title">Fact 1</h5>
+                <p class="card-text">I have way too many consoles and video games, most of which I either haven't finished 
+                    or haven't played at all! I have about 8 different consoles, 4 hand-helds, and a gaming PC. I actually 
+                    don't spend a lot of time gaming, but when I do I tend to go all out and will play the games for 10+ 
+                    hours a day for like 2 solid weeks.</p>
+              </div>
+            </div>
+            <div class="card text-white bg-secondary">
+              <div class="card-body">
+                <h5 class="card-title">Fact 2</h5>
+                <p class="card-text">I love posters and art, mostly from comic books and video games. I do not like having 
+                    just "official game art", I usually prefer concept art or art from Indie developers. But I also have way 
+                    too many posters and not enough wall space for them so they just sit in poster tubes until I decide to 
+                    play tetris on my walls again.</p>
+              </div>
+            </div>
+            <div class="card text-white bg-secondary">
+              <div class="card-body">
+                <h5 class="card-title">Fact 3</h5>
+                <p class="card-text">tend to get obsessive with Indie Developers and tend to just play their games and focus 
+                    on those. Although I am an avid Zelda fan, I do tend to prefer indie games. Right now I am currently obsessed 
+                    with Supergiant Games and Night School Studio. Especially the art and music from supergiant games 
+                    (the transistor soundtrack is my go-to for when I'm coding).</p>
+              </div>
+            </div>
+            <div class="card text-white bg-secondary">
+                <div class="card-body">
+                  <h5 class="card-title">fact 4</h5>
+                  <p class="card-text">I love to bake! I actually make commission cakes/cupcakes/treats as sort of a supplement 
+                      income thing. I started really getting into baking about 3 years ago and I picked up on it really quickly. 
+                      I spent a good while researching the chemistry behind baking because I wanted to make my recipers perfect, 
+                      and I feel like I've done it. It low-key drives my friends insane when they try to bake with me because I 
+                      am so percise and often times don't let them do anything.</p>
+                </div>
+              </div>
+          </div>-->
+    </main>
+
+
+
+    <footer>
+        <p>Alexis Gantz | CITPT 225 | week 1: Assignment 1 | Create a Simple Webiste</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
